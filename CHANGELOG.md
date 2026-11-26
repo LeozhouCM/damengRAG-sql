@@ -4,6 +4,20 @@
 
 依据：实践计划书 §4(六) 要求记录变更日期、范围和受影响块。
 
+## 2026-11-26：1B 检索与 20 题基线评测
+
+- 范围：在 1A v2 的 27 个来源、1,502 个子块、240 个父块上建向量索引和 BM25 索引，跑通角色检索和 20 题基线；不生成报告正文。
+- 模型：`BAAI/bge-base-zh-v1.5`（768 维、最大 512 token、查询指令按模型卡），不用 `bge-small`。
+- 索引：Chroma 集合 `dm_slow_sql_v2`，cosine；子块向量 1,502 条；BM25 用 jieba 精确模式 + `tags.yaml` 词表，`BM25Okapi(k1=1.5, b=0.75)`；索引目录 11.34 MB，本机构建耗时 173.46 秒。
+- 检索：dense/BM25 各取 50 个子块，子块级 RRF（`k=60`）融合；每角色取前 10 个父块候选，每父块只留一个代表子块；选 root 先看角色覆盖数、再看候选分数和、最后按 `root_id`；角色名额问题 2/原因 3/办法 3/验证 2，补充角色默认 2；缺角色只在 root 内补一次；父块展开前后各 2 块、单角色/单父块各 1,500 字；证据按 `content_type=执行计划/统计输出` 单独取，名额 3。
+- 新增/修改：`src/knowledge/config.py` 的 `chroma_relative_path()`、`scripts/build_index.py`、`scripts/search.py`、`scripts/eval_retrieval.py`、`tests/test_retrieval.py`、`README_1B.md`、`data/eval/questions.jsonl`。
+- 20 题：4 个主题各 5 题；17 个 gold root；12 道多角色、3 道三角色及以上、14 道带证据类型；doc-001 有 4 题，超过“每 root 最多 3 题”的原约束，作为已记录例外。
+- 结果：CaseHit@1 95.0%（19/20）；RoleRecall@3 macro 80.0%、micro 77.1%（27/35）；RoleMRR@3 macro 65.1%、micro 60.5%；RoleCoverage 100.0%；RoleGoldCoverage 85.0%；EvidenceCoverage 85.7%（14 题，其中 q05/q09 的 gold 本身没有要求类型，按资料不足解释；可评估 12 题为 100%）；MissingRoleCount 均值/最大 0/0；ContextChars 均值 1,620、最大 2,961；Global Recall@5 70.0%；单题耗时均值/P50/P90 118.4/68.5/94.5 ms。
+- 工程校验：`pytest` 52 通过；Chroma 1,502/1,502；BM25 1,502/1,502；构建后关闭/重开 Chroma、新进程查询均通过；q01 同题两次检索 root/selected chunks/missing roles 一致。
+- 修复：Chroma 1.5.9 + Windows 下，含中文的绝对路径会导致 HNSW 落盘/加载失败（`Error loading hnsw index`）；改用从项目根目录出发的相对 ASCII 路径后正常，脚本必须从项目根目录运行。
+- 已知失败：q19 在近义案例 case-012/case-021 之间选错；q13 root 对但“手动收集”步骤未进 top3；q02/q03/q04/q06/q18/q19 另有角色 top3 未命中，合计 8/35。
+- 未完成：质量通过线未定、未调参、未做 query rewriting/标题入索引/领域微调、未生成报告正文、20 题未扩充；索引目录按约定不进 Git，20 题/指标/报告已提交，仍等待人工验证。
+
 ## 2026-11-26：1A v2（小块 + 父子块 + 角色）
 
 - 范围：26 篇案例 + 1 篇 DM9 手册样章（系统管理员手册第 22 章“查询优化”）；不包含 embedding/向量库。

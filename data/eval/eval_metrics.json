@@ -1,0 +1,1704 @@
+{
+  "generated_at": "2026-11-26T12:29:33.800601+00:00",
+  "questions_file": "E:\\毕业设计\\4-1达梦ai\\damengRAG-sql\\data\\eval\\questions.jsonl",
+  "index_meta": {
+    "built_at": "2026-11-26T12:28:44.751879+00:00",
+    "embedding_model": "BAAI/bge-base-zh-v1.5",
+    "embedding_dim": 768,
+    "max_seq_length": 512,
+    "query_instruction": "为这个句子生成表示以用于检索相关文章：",
+    "chroma_collection": "dm_slow_sql_v2",
+    "chroma_dir": "E:\\毕业设计\\4-1达梦ai\\damengRAG-sql\\data\\index\\chroma",
+    "chunk_count": 1502,
+    "parent_count": 240,
+    "root_count": 27,
+    "chunks_sha256": "c3f66d59c69ccc8772216d7caeee125bce1932d0d5e8105e1027d2759d095fed",
+    "tags_sha256": "0742fab54267f19440b7b9a046e1c4ee59230810fe6f3d10a8581445dc707af5",
+    "bm25_k1": 1.5,
+    "bm25_b": 0.75,
+    "bm25_doc_count": 1502,
+    "role_counts": {
+      "概念": 265,
+      "未分类": 463,
+      "验证": 152,
+      "办法": 311,
+      "步骤": 99,
+      "问题": 173,
+      "原因": 20,
+      "总结": 18,
+      "参考": 1
+    },
+    "content_type_counts": {
+      "文字": 278,
+      "SQL": 465,
+      "执行计划": 524,
+      "统计输出": 53,
+      "表格": 182
+    },
+    "elapsed_sec": 173.463
+  },
+  "preflight": {
+    "question_count": 20,
+    "topics": {
+      "执行计划": 5,
+      "索引": 5,
+      "统计信息": 5,
+      "SQL写法": 5
+    },
+    "root_count": 17,
+    "max_questions_per_root": 4,
+    "role_question_counts": {
+      "原因": 5,
+      "办法": 11,
+      "验证": 5,
+      "问题": 6,
+      "概念": 3,
+      "总结": 1,
+      "步骤": 4
+    },
+    "multi_role_questions": 12,
+    "three_plus_role_questions": 3,
+    "evidence_questions": 14,
+    "warnings": [
+      "gold root doc-001 有 4 题，超过原计划的 max 3；原因见 README_1B",
+      "q05: gold root case-001 不含证据类型 ['执行计划']，证据覆盖按资料不足解释",
+      "q09: gold root case-005 不含证据类型 ['执行计划']，证据覆盖按资料不足解释"
+    ]
+  },
+  "metrics": {
+    "question_count": 20,
+    "case_hit_at_1": 0.95,
+    "case_hit_at_1_inferred": 0.95,
+    "role_recall_at_3_macro": 0.8,
+    "role_recall_at_3_micro": 0.7714285714285715,
+    "role_mrr_at_3_macro": 0.6513888888888889,
+    "role_mrr_at_3_micro": 0.6047619047619048,
+    "role_instance_count": 35,
+    "role_hit_count": 27,
+    "role_coverage": 1.0,
+    "role_gold_coverage": 0.85,
+    "evidence_coverage": 0.8571428571428571,
+    "evidence_question_count": 14,
+    "missing_role_count_mean": 0.0,
+    "missing_role_count_max": 0,
+    "context_chars_mean": 1620.05,
+    "context_chars_p50": 1546.0,
+    "context_chars_max": 2961,
+    "selected_chunk_count_mean": 2.5,
+    "global_recall_at_5": 0.7,
+    "role_infer_exact": 1.0,
+    "role_infer_coverage": 1.0,
+    "role_infer_jaccard": 1.0,
+    "latency_ms_mean": 118.37345,
+    "latency_ms_p50": 68.482,
+    "latency_ms_p90": 94.472
+  },
+  "topics": {
+    "SQL写法": {
+      "question_count": 5,
+      "case_hit_at_1": 0.8,
+      "role_recall_at_3": 0.7,
+      "role_mrr_at_3": 0.5166666666666667,
+      "role_gold_coverage": 0.8,
+      "evidence_coverage": 1.0,
+      "context_chars_mean": 1846.8,
+      "global_recall_at_5": 0.8
+    },
+    "执行计划": {
+      "question_count": 5,
+      "case_hit_at_1": 1.0,
+      "role_recall_at_3": 0.8,
+      "role_mrr_at_3": 0.5388888888888889,
+      "role_gold_coverage": 0.8,
+      "evidence_coverage": 0.8,
+      "context_chars_mean": 1968.4,
+      "global_recall_at_5": 0.2
+    },
+    "索引": {
+      "question_count": 5,
+      "case_hit_at_1": 1.0,
+      "role_recall_at_3": 0.9,
+      "role_mrr_at_3": 0.75,
+      "role_gold_coverage": 1.0,
+      "evidence_coverage": 0.6666666666666666,
+      "context_chars_mean": 1462.2,
+      "global_recall_at_5": 1.0
+    },
+    "统计信息": {
+      "question_count": 5,
+      "case_hit_at_1": 1.0,
+      "role_recall_at_3": 0.8,
+      "role_mrr_at_3": 0.8,
+      "role_gold_coverage": 0.8,
+      "evidence_coverage": 1.0,
+      "context_chars_mean": 1202.8,
+      "global_recall_at_5": 0.8
+    }
+  },
+  "determinism": {
+    "checked": true,
+    "question_id": "q01",
+    "same_root": true,
+    "same_selected_chunks": true,
+    "same_missing_roles": true
+  },
+  "per_question": [
+    {
+      "question_id": "q01",
+      "topic": "执行计划",
+      "question": "这条 left join 和 inner join 混用的 SQL 慢的原因是什么？优化思路是什么？",
+      "required_roles": [
+        "原因",
+        "办法"
+      ],
+      "inferred_roles": [
+        "原因",
+        "办法"
+      ],
+      "gold_root_id": "case-009",
+      "selected_root_id": "case-009",
+      "selected_root_id_inferred": "case-009",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 0.5,
+      "role_hit_count": 2,
+      "role_scored_count": 2,
+      "role_mrr_sum": 1.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 2,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划"
+      ],
+      "evidence_types_present": [
+        "执行计划"
+      ],
+      "context_chars": 1546,
+      "global_recall_at_5": false,
+      "global_top5_parents": [
+        "case-021-p002",
+        "case-025-p001",
+        "case-012-p005",
+        "case-011-p001",
+        "doc-001-p024"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "原因": {
+          "hit": true,
+          "hit_rank": 2,
+          "top3_parents": [
+            "case-019-p003",
+            "case-009-p002"
+          ]
+        },
+        "办法": {
+          "hit": true,
+          "hit_rank": 2,
+          "top3_parents": [
+            "case-008-p003",
+            "case-009-p003",
+            "case-006-p012"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "原因": [
+          "case-009-p002"
+        ],
+        "办法": [
+          "case-009-p003"
+        ]
+      },
+      "latency_ms": 884.353,
+      "latency_ms_inferred": 75.167,
+      "gold_parent_union": [
+        "case-009-p002",
+        "case-009-p003"
+      ]
+    },
+    {
+      "question_id": "q02",
+      "topic": "执行计划",
+      "question": "谓词下推为什么能减少大表的扫描行数？优化后怎么验证效果？",
+      "required_roles": [
+        "原因",
+        "办法",
+        "验证"
+      ],
+      "inferred_roles": [
+        "原因",
+        "办法",
+        "验证"
+      ],
+      "gold_root_id": "case-018",
+      "selected_root_id": "case-018",
+      "selected_root_id_inferred": "case-018",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 0.6666666666666666,
+      "role_mrr_at_3": 0.6666666666666666,
+      "role_hit_count": 2,
+      "role_scored_count": 3,
+      "role_mrr_sum": 2.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 3,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划",
+        "统计输出"
+      ],
+      "evidence_types_present": [
+        "执行计划",
+        "统计输出"
+      ],
+      "context_chars": 2294,
+      "global_recall_at_5": false,
+      "global_top5_parents": [
+        "case-018-p001",
+        "case-015-p005",
+        "case-004-p006",
+        "case-007-p001",
+        "case-010-p004"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "原因": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-018-p004",
+            "case-009-p002",
+            "case-019-p003"
+          ]
+        },
+        "办法": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-018-p005",
+            "case-005-p005",
+            "case-005-p006"
+          ]
+        },
+        "验证": {
+          "hit": false,
+          "hit_rank": null,
+          "top3_parents": [
+            "case-019-p005",
+            "case-010-p004",
+            "case-013-p020"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "原因": [
+          "case-018-p004"
+        ],
+        "办法": [
+          "case-018-p005"
+        ],
+        "验证": [
+          "case-018-p006"
+        ]
+      },
+      "latency_ms": 69.221,
+      "latency_ms_inferred": 75.314,
+      "gold_parent_union": [
+        "case-018-p004",
+        "case-018-p005",
+        "case-018-p006"
+      ]
+    },
+    {
+      "question_id": "q03",
+      "topic": "执行计划",
+      "question": "问题 SQL 的执行计划暴露了什么问题，原因是什么，怎么验证效果？",
+      "required_roles": [
+        "问题",
+        "原因",
+        "验证"
+      ],
+      "inferred_roles": [
+        "问题",
+        "原因",
+        "验证"
+      ],
+      "gold_root_id": "case-019",
+      "selected_root_id": "case-019",
+      "selected_root_id_inferred": "case-019",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 0.6666666666666666,
+      "role_mrr_at_3": 0.5,
+      "role_hit_count": 2,
+      "role_scored_count": 3,
+      "role_mrr_sum": 1.5,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 0.6666666666666666,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 3,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划"
+      ],
+      "evidence_types_present": [
+        "执行计划"
+      ],
+      "context_chars": 2471,
+      "global_recall_at_5": false,
+      "global_top5_parents": [
+        "case-025-p001",
+        "case-012-p002",
+        "case-004-p006",
+        "case-017-p001",
+        "case-019-p004"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "问题": {
+          "hit": false,
+          "hit_rank": null,
+          "top3_parents": [
+            "case-012-p002",
+            "case-012-p001",
+            "case-017-p001"
+          ]
+        },
+        "原因": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-019-p003",
+            "case-009-p002",
+            "case-018-p004"
+          ]
+        },
+        "验证": {
+          "hit": true,
+          "hit_rank": 2,
+          "top3_parents": [
+            "case-010-p004",
+            "case-019-p005"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "问题": [
+          "case-019-p004"
+        ],
+        "原因": [
+          "case-019-p003"
+        ],
+        "验证": [
+          "case-019-p005"
+        ]
+      },
+      "latency_ms": 75.29,
+      "latency_ms_inferred": 73.036,
+      "gold_parent_union": [
+        "case-019-p002",
+        "case-019-p003",
+        "case-019-p005"
+      ]
+    },
+    {
+      "question_id": "q04",
+      "topic": "执行计划",
+      "question": "排序加分页的 SQL 问题出在哪？怎么通过索引和 Hint 优化，并验证优化后的计划？",
+      "required_roles": [
+        "问题",
+        "办法",
+        "验证"
+      ],
+      "inferred_roles": [
+        "问题",
+        "办法",
+        "验证"
+      ],
+      "gold_root_id": "case-013",
+      "selected_root_id": "case-013",
+      "selected_root_id_inferred": "case-013",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 0.6666666666666666,
+      "role_mrr_at_3": 0.27777777777777773,
+      "role_hit_count": 2,
+      "role_scored_count": 3,
+      "role_mrr_sum": 0.8333333333333333,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 0.3333333333333333,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 5,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划",
+        "统计输出"
+      ],
+      "evidence_types_present": [
+        "执行计划",
+        "统计输出"
+      ],
+      "context_chars": 2961,
+      "global_recall_at_5": false,
+      "global_top5_parents": [
+        "case-024-p006",
+        "case-024-p006",
+        "case-005-p005",
+        "case-013-p024",
+        "case-024-p001"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "问题": {
+          "hit": true,
+          "hit_rank": 3,
+          "top3_parents": [
+            "case-013-p014",
+            "case-013-p021",
+            "case-013-p018"
+          ]
+        },
+        "办法": {
+          "hit": false,
+          "hit_rank": null,
+          "top3_parents": [
+            "case-024-p006",
+            "case-005-p005",
+            "case-013-p013"
+          ]
+        },
+        "验证": {
+          "hit": true,
+          "hit_rank": 2,
+          "top3_parents": [
+            "case-010-p004",
+            "case-013-p020"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "问题": [
+          "case-013-p014",
+          "case-013-p021"
+        ],
+        "办法": [
+          "case-013-p013",
+          "case-013-p022"
+        ],
+        "验证": [
+          "case-013-p020"
+        ]
+      },
+      "latency_ms": 73.412,
+      "latency_ms_inferred": 88.182,
+      "gold_parent_union": [
+        "case-013-p018",
+        "case-013-p019",
+        "case-013-p020"
+      ]
+    },
+    {
+      "question_id": "q05",
+      "topic": "执行计划",
+      "question": "WITH CTE 写法没有构建临时表，怎么对比执行计划并解决？",
+      "required_roles": [
+        "办法",
+        "验证"
+      ],
+      "inferred_roles": [
+        "办法",
+        "验证"
+      ],
+      "gold_root_id": "case-001",
+      "selected_root_id": "case-001",
+      "selected_root_id_inferred": "case-001",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 0.75,
+      "role_hit_count": 2,
+      "role_scored_count": 2,
+      "role_mrr_sum": 1.5,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 2,
+      "evidence_coverage": 0.0,
+      "required_content_types": [
+        "执行计划"
+      ],
+      "evidence_types_present": [],
+      "context_chars": 570,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-001-p005",
+        "case-001-p003",
+        "case-001-p001",
+        "case-001-p005",
+        "case-020-p003"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "办法": {
+          "hit": true,
+          "hit_rank": 2,
+          "top3_parents": [
+            "case-021-p004",
+            "case-001-p006",
+            "case-009-p003"
+          ]
+        },
+        "验证": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-001-p005",
+            "case-018-p006",
+            "case-010-p004"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "办法": [
+          "case-001-p006"
+        ],
+        "验证": [
+          "case-001-p005"
+        ]
+      },
+      "latency_ms": 59.796,
+      "latency_ms_inferred": 119.269,
+      "gold_parent_union": [
+        "case-001-p005",
+        "case-001-p006"
+      ]
+    },
+    {
+      "question_id": "q06",
+      "topic": "索引",
+      "question": "分区表上全局索引和局部索引怎么选？改成全局索引后怎么验证？",
+      "required_roles": [
+        "办法",
+        "验证"
+      ],
+      "inferred_roles": [
+        "办法",
+        "验证"
+      ],
+      "gold_root_id": "case-010",
+      "selected_root_id": "case-010",
+      "selected_root_id_inferred": "case-010",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 0.5,
+      "role_mrr_at_3": 0.5,
+      "role_hit_count": 1,
+      "role_scored_count": 2,
+      "role_mrr_sum": 1.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 2,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划",
+        "统计输出"
+      ],
+      "evidence_types_present": [
+        "执行计划",
+        "统计输出"
+      ],
+      "context_chars": 1480,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-010-p005",
+        "case-010-p001",
+        "case-010-p006",
+        "case-010-p007",
+        "case-010-p003"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "办法": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-010-p003",
+            "case-014-p003",
+            "case-005-p005"
+          ]
+        },
+        "验证": {
+          "hit": false,
+          "hit_rank": null,
+          "top3_parents": [
+            "case-019-p005"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "办法": [
+          "case-010-p003"
+        ],
+        "验证": [
+          "case-010-p004"
+        ]
+      },
+      "latency_ms": 86.475,
+      "latency_ms_inferred": 94.122,
+      "gold_parent_union": [
+        "case-010-p003",
+        "case-010-p004"
+      ]
+    },
+    {
+      "question_id": "q07",
+      "topic": "索引",
+      "question": "复合索引跳跃扫描在什么情况下生效？达梦受哪些参数控制？",
+      "required_roles": [
+        "概念"
+      ],
+      "inferred_roles": [
+        "概念"
+      ],
+      "gold_root_id": "case-007",
+      "selected_root_id": "case-007",
+      "selected_root_id_inferred": "case-007",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 1.0,
+      "role_hit_count": 1,
+      "role_scored_count": 1,
+      "role_mrr_sum": 1.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 1,
+      "evidence_coverage": null,
+      "required_content_types": [],
+      "evidence_types_present": [
+        "执行计划"
+      ],
+      "context_chars": 1181,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-007-p001",
+        "case-020-p004",
+        "case-007-p001",
+        "case-007-p002",
+        "case-001-p005"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "概念": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-007-p001",
+            "case-015-p001",
+            "case-020-p001"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "概念": [
+          "case-007-p001"
+        ]
+      },
+      "latency_ms": 65.919,
+      "latency_ms_inferred": 72.633,
+      "gold_parent_union": [
+        "case-007-p001"
+      ]
+    },
+    {
+      "question_id": "q08",
+      "topic": "索引",
+      "question": "请总结 DM 中 rowid 是什么，什么场景可以用 rowid 快速过滤数据？",
+      "required_roles": [
+        "概念",
+        "总结"
+      ],
+      "inferred_roles": [
+        "概念",
+        "总结"
+      ],
+      "gold_root_id": "case-003",
+      "selected_root_id": "case-003",
+      "selected_root_id_inferred": "case-003",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 0.75,
+      "role_hit_count": 2,
+      "role_scored_count": 2,
+      "role_mrr_sum": 1.5,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 3,
+      "evidence_coverage": null,
+      "required_content_types": [],
+      "evidence_types_present": [],
+      "context_chars": 808,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-003-p001",
+        "case-024-p008",
+        "case-003-p006",
+        "case-003-p002",
+        "case-024-p007"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "概念": {
+          "hit": true,
+          "hit_rank": 2,
+          "top3_parents": [
+            "case-003-p001",
+            "case-003-p002",
+            "doc-001-p007"
+          ]
+        },
+        "总结": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-003-p006",
+            "case-026-p004",
+            "case-025-p009"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "概念": [
+          "case-003-p001",
+          "case-003-p002"
+        ],
+        "总结": [
+          "case-003-p006"
+        ]
+      },
+      "latency_ms": 70.796,
+      "latency_ms_inferred": 67.684,
+      "gold_parent_union": [
+        "case-003-p002",
+        "case-003-p006"
+      ]
+    },
+    {
+      "question_id": "q09",
+      "topic": "索引",
+      "question": "分页排序 SQL 的 SORT 能不能消除？TOP_ORDER_OPT_FLAG 和 TOP_ORDER_ESTIMATE_CARD 应该怎么调整，具体操作步骤是什么？",
+      "required_roles": [
+        "办法",
+        "步骤"
+      ],
+      "inferred_roles": [
+        "办法",
+        "步骤"
+      ],
+      "gold_root_id": "case-005",
+      "selected_root_id": "case-005",
+      "selected_root_id_inferred": "case-005",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 0.75,
+      "role_hit_count": 2,
+      "role_scored_count": 2,
+      "role_mrr_sum": 1.5,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 3,
+      "evidence_coverage": 0.0,
+      "required_content_types": [
+        "执行计划"
+      ],
+      "evidence_types_present": [],
+      "context_chars": 1714,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-024-p006",
+        "case-005-p001",
+        "case-005-p005",
+        "case-005-p006",
+        "case-005-p005"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "办法": {
+          "hit": true,
+          "hit_rank": 2,
+          "top3_parents": [
+            "case-024-p006",
+            "case-005-p006",
+            "case-005-p005"
+          ]
+        },
+        "步骤": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-005-p007",
+            "case-002-p002"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "办法": [
+          "case-005-p006",
+          "case-005-p005"
+        ],
+        "步骤": [
+          "case-005-p007"
+        ]
+      },
+      "latency_ms": 94.472,
+      "latency_ms_inferred": 87.749,
+      "gold_parent_union": [
+        "case-005-p005",
+        "case-005-p006",
+        "case-005-p007"
+      ]
+    },
+    {
+      "question_id": "q10",
+      "topic": "索引",
+      "question": "字段上做运算导致索引失效，问题出在哪，应该怎么改写 SQL？",
+      "required_roles": [
+        "问题",
+        "办法"
+      ],
+      "inferred_roles": [
+        "问题",
+        "办法"
+      ],
+      "gold_root_id": "case-014",
+      "selected_root_id": "case-014",
+      "selected_root_id_inferred": "case-014",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 0.75,
+      "role_hit_count": 2,
+      "role_scored_count": 2,
+      "role_mrr_sum": 1.5,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 2,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划",
+        "统计输出"
+      ],
+      "evidence_types_present": [
+        "执行计划",
+        "统计输出"
+      ],
+      "context_chars": 2128,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-012-p004",
+        "case-014-p002",
+        "case-020-p002",
+        "case-006-p012",
+        "case-014-p001"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "问题": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-014-p002",
+            "case-010-p002",
+            "case-019-p004"
+          ]
+        },
+        "办法": {
+          "hit": true,
+          "hit_rank": 2,
+          "top3_parents": [
+            "case-012-p004",
+            "case-014-p003",
+            "case-010-p003"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "问题": [
+          "case-014-p002"
+        ],
+        "办法": [
+          "case-014-p003"
+        ]
+      },
+      "latency_ms": 68.482,
+      "latency_ms_inferred": 60.923,
+      "gold_parent_union": [
+        "case-014-p002",
+        "case-014-p003"
+      ]
+    },
+    {
+      "question_id": "q11",
+      "topic": "统计信息",
+      "question": "达梦的统计信息有哪些种类，对优化器有什么作用？",
+      "required_roles": [
+        "概念"
+      ],
+      "inferred_roles": [
+        "概念"
+      ],
+      "gold_root_id": "doc-001",
+      "selected_root_id": "doc-001",
+      "selected_root_id_inferred": "doc-001",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 1.0,
+      "role_hit_count": 1,
+      "role_scored_count": 1,
+      "role_mrr_sum": 1.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 2,
+      "evidence_coverage": null,
+      "required_content_types": [],
+      "evidence_types_present": [
+        "执行计划"
+      ],
+      "context_chars": 1214,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "doc-001-p010",
+        "doc-001-p009",
+        "doc-001-p002",
+        "doc-001-p013",
+        "case-013-p005"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "概念": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "doc-001-p010",
+            "doc-001-p009",
+            "doc-001-p013"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "概念": [
+          "doc-001-p010",
+          "doc-001-p009"
+        ]
+      },
+      "latency_ms": 67.066,
+      "latency_ms_inferred": 59.762,
+      "gold_parent_union": [
+        "doc-001-p010",
+        "doc-001-p011"
+      ]
+    },
+    {
+      "question_id": "q12",
+      "topic": "统计信息",
+      "question": "达梦统计信息应该在查询前收集还是查询时收集？",
+      "required_roles": [
+        "步骤"
+      ],
+      "inferred_roles": [
+        "步骤"
+      ],
+      "gold_root_id": "doc-001",
+      "selected_root_id": "doc-001",
+      "selected_root_id_inferred": "doc-001",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 1.0,
+      "role_hit_count": 1,
+      "role_scored_count": 1,
+      "role_mrr_sum": 1.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 2,
+      "evidence_coverage": null,
+      "required_content_types": [],
+      "evidence_types_present": [
+        "执行计划"
+      ],
+      "context_chars": 1323,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "doc-001-p012",
+        "doc-001-p018",
+        "doc-001-p010",
+        "doc-001-p020",
+        "doc-001-p002"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "步骤": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "doc-001-p012",
+            "doc-001-p018",
+            "doc-001-p016"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "步骤": [
+          "doc-001-p012",
+          "doc-001-p018"
+        ]
+      },
+      "latency_ms": 64.182,
+      "latency_ms_inferred": 56.819,
+      "gold_parent_union": [
+        "doc-001-p012"
+      ]
+    },
+    {
+      "question_id": "q13",
+      "topic": "统计信息",
+      "question": "达梦怎么手动收集某张表的统计信息？",
+      "required_roles": [
+        "步骤"
+      ],
+      "inferred_roles": [
+        "步骤"
+      ],
+      "gold_root_id": "doc-001",
+      "selected_root_id": "doc-001",
+      "selected_root_id_inferred": "doc-001",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 0.0,
+      "role_mrr_at_3": 0.0,
+      "role_hit_count": 0,
+      "role_scored_count": 1,
+      "role_mrr_sum": 0.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 0.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 2,
+      "evidence_coverage": null,
+      "required_content_types": [],
+      "evidence_types_present": [
+        "执行计划"
+      ],
+      "context_chars": 1136,
+      "global_recall_at_5": false,
+      "global_top5_parents": [
+        "doc-001-p016",
+        "doc-001-p018",
+        "doc-001-p014",
+        "doc-001-p010",
+        "doc-001-p013"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "步骤": {
+          "hit": false,
+          "hit_rank": null,
+          "top3_parents": [
+            "doc-001-p016",
+            "doc-001-p014",
+            "doc-001-p018"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "步骤": [
+          "doc-001-p016",
+          "doc-001-p014"
+        ]
+      },
+      "latency_ms": 64.558,
+      "latency_ms_inferred": 57.27,
+      "gold_parent_union": [
+        "doc-001-p021"
+      ]
+    },
+    {
+      "question_id": "q14",
+      "topic": "统计信息",
+      "question": "绑定变量传入低频值和高频值时，为什么执行计划会不同？",
+      "required_roles": [
+        "原因"
+      ],
+      "inferred_roles": [
+        "原因"
+      ],
+      "gold_root_id": "case-002",
+      "selected_root_id": "case-002",
+      "selected_root_id_inferred": "case-002",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 1.0,
+      "role_hit_count": 1,
+      "role_scored_count": 1,
+      "role_mrr_sum": 1.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 1,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "统计输出",
+        "执行计划"
+      ],
+      "evidence_types_present": [
+        "执行计划",
+        "统计输出"
+      ],
+      "context_chars": 779,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-002-p001",
+        "case-002-p005",
+        "case-002-p008",
+        "case-002-p006",
+        "case-002-p009"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "原因": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-002-p009",
+            "case-009-p002"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "原因": [
+          "case-002-p009"
+        ]
+      },
+      "latency_ms": 250.3,
+      "latency_ms_inferred": 399.537,
+      "gold_parent_union": [
+        "case-002-p009"
+      ]
+    },
+    {
+      "question_id": "q15",
+      "topic": "统计信息",
+      "question": "怎么查看达梦已经生成的统计信息？",
+      "required_roles": [
+        "步骤"
+      ],
+      "inferred_roles": [
+        "步骤"
+      ],
+      "gold_root_id": "doc-001",
+      "selected_root_id": "doc-001",
+      "selected_root_id_inferred": "doc-001",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 1.0,
+      "role_hit_count": 1,
+      "role_scored_count": 1,
+      "role_mrr_sum": 1.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 2,
+      "evidence_coverage": null,
+      "required_content_types": [],
+      "evidence_types_present": [
+        "执行计划"
+      ],
+      "context_chars": 1562,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "doc-001-p010",
+        "doc-001-p018",
+        "doc-001-p018",
+        "doc-001-p013",
+        "case-025-p009"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "步骤": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "doc-001-p018",
+            "doc-001-p016",
+            "doc-001-p020"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "步骤": [
+          "doc-001-p018",
+          "doc-001-p016"
+        ]
+      },
+      "latency_ms": 64.83,
+      "latency_ms_inferred": 66.088,
+      "gold_parent_union": [
+        "doc-001-p018"
+      ]
+    },
+    {
+      "question_id": "q16",
+      "topic": "SQL写法",
+      "question": "IN 子查询怎么改写成 EXISTS 或内连接？",
+      "required_roles": [
+        "办法"
+      ],
+      "inferred_roles": [
+        "办法"
+      ],
+      "gold_root_id": "case-006",
+      "selected_root_id": "case-006",
+      "selected_root_id_inferred": "case-006",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 0.3333333333333333,
+      "role_hit_count": 1,
+      "role_scored_count": 1,
+      "role_mrr_sum": 0.3333333333333333,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 3,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划"
+      ],
+      "evidence_types_present": [
+        "执行计划",
+        "统计输出"
+      ],
+      "context_chars": 1718,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-006-p008",
+        "case-008-p005",
+        "case-006-p005",
+        "case-008-p003",
+        "case-008-p003"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "办法": {
+          "hit": true,
+          "hit_rank": 3,
+          "top3_parents": [
+            "case-006-p008",
+            "case-008-p005",
+            "case-006-p005"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "办法": [
+          "case-006-p008",
+          "case-006-p005",
+          "case-006-p014"
+        ]
+      },
+      "latency_ms": 52.657,
+      "latency_ms_inferred": 60.198,
+      "gold_parent_union": [
+        "case-006-p004",
+        "case-006-p005"
+      ]
+    },
+    {
+      "question_id": "q17",
+      "topic": "SQL写法",
+      "question": "CASE WHEN EXISTS 相关子查询的问题出在哪，应该怎么优化？",
+      "required_roles": [
+        "问题",
+        "办法"
+      ],
+      "inferred_roles": [
+        "问题",
+        "办法"
+      ],
+      "gold_root_id": "case-008",
+      "selected_root_id": "case-008",
+      "selected_root_id_inferred": "case-008",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 1.0,
+      "role_hit_count": 2,
+      "role_scored_count": 2,
+      "role_mrr_sum": 2.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 5,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划"
+      ],
+      "evidence_types_present": [
+        "执行计划",
+        "统计输出"
+      ],
+      "context_chars": 2762,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-008-p003",
+        "case-008-p005",
+        "case-008-p003",
+        "case-021-p001",
+        "case-008-p003"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "问题": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-008-p002",
+            "case-021-p002",
+            "case-017-p001"
+          ]
+        },
+        "办法": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-008-p003",
+            "case-008-p005",
+            "case-006-p008"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "问题": [
+          "case-008-p002",
+          "case-008-p001"
+        ],
+        "办法": [
+          "case-008-p003",
+          "case-008-p005",
+          "case-008-p004"
+        ]
+      },
+      "latency_ms": 73.363,
+      "latency_ms_inferred": 64.274,
+      "gold_parent_union": [
+        "case-008-p002",
+        "case-008-p003",
+        "case-008-p004"
+      ]
+    },
+    {
+      "question_id": "q18",
+      "topic": "SQL写法",
+      "question": "NOT EXISTS 反关联 SQL 的问题是什么，怎么改写？",
+      "required_roles": [
+        "问题",
+        "办法"
+      ],
+      "inferred_roles": [
+        "问题",
+        "办法"
+      ],
+      "gold_root_id": "case-011",
+      "selected_root_id": "case-011",
+      "selected_root_id_inferred": "case-011",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 0.5,
+      "role_mrr_at_3": 0.25,
+      "role_hit_count": 1,
+      "role_scored_count": 2,
+      "role_mrr_sum": 0.5,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 3,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划",
+        "统计输出"
+      ],
+      "evidence_types_present": [
+        "执行计划",
+        "统计输出"
+      ],
+      "context_chars": 1484,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-006-p008",
+        "case-011-p005",
+        "case-011-p005",
+        "case-008-p003",
+        "case-008-p003"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "问题": {
+          "hit": false,
+          "hit_rank": null,
+          "top3_parents": [
+            "case-022-p004",
+            "case-021-p003",
+            "case-008-p002"
+          ]
+        },
+        "办法": {
+          "hit": true,
+          "hit_rank": 2,
+          "top3_parents": [
+            "case-006-p008",
+            "case-011-p005",
+            "case-008-p003"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "问题": [
+          "case-011-p003"
+        ],
+        "办法": [
+          "case-011-p005",
+          "case-011-p006"
+        ]
+      },
+      "latency_ms": 63.934,
+      "latency_ms_inferred": 63.411,
+      "gold_parent_union": [
+        "case-011-p003",
+        "case-011-p005"
+      ]
+    },
+    {
+      "question_id": "q19",
+      "topic": "SQL写法",
+      "question": "标量子查询反向改写案例中，问题 SQL 应该怎么改写？",
+      "required_roles": [
+        "问题",
+        "办法"
+      ],
+      "inferred_roles": [
+        "问题",
+        "办法"
+      ],
+      "gold_root_id": "case-012",
+      "selected_root_id": "case-021",
+      "selected_root_id_inferred": "case-021",
+      "case_hit_at_1": false,
+      "case_hit_at_1_inferred": false,
+      "role_recall_at_3": 0.0,
+      "role_mrr_at_3": 0.0,
+      "role_hit_count": 0,
+      "role_scored_count": 2,
+      "role_mrr_sum": 0.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 0.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 3,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划"
+      ],
+      "evidence_types_present": [
+        "执行计划",
+        "统计输出"
+      ],
+      "context_chars": 2183,
+      "global_recall_at_5": false,
+      "global_top5_parents": [
+        "case-022-p001",
+        "case-021-p002",
+        "case-006-p012",
+        "case-006-p014",
+        "case-012-p005"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "问题": {
+          "hit": false,
+          "hit_rank": null,
+          "top3_parents": [
+            "case-021-p002",
+            "case-022-p002",
+            "case-022-p004"
+          ]
+        },
+        "办法": {
+          "hit": false,
+          "hit_rank": null,
+          "top3_parents": [
+            "case-006-p012",
+            "case-006-p014",
+            "case-021-p004"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "问题": [
+          "case-021-p002",
+          "case-021-p003"
+        ],
+        "办法": [
+          "case-021-p004"
+        ]
+      },
+      "latency_ms": 64.148,
+      "latency_ms_inferred": 70.65,
+      "gold_parent_union": [
+        "case-012-p002",
+        "case-012-p003",
+        "case-012-p004"
+      ]
+    },
+    {
+      "question_id": "q20",
+      "topic": "SQL写法",
+      "question": "分组和分析函数为什么需要索引？",
+      "required_roles": [
+        "原因"
+      ],
+      "inferred_roles": [
+        "原因"
+      ],
+      "gold_root_id": "case-023",
+      "selected_root_id": "case-023",
+      "selected_root_id_inferred": "case-023",
+      "case_hit_at_1": true,
+      "case_hit_at_1_inferred": true,
+      "role_recall_at_3": 1.0,
+      "role_mrr_at_3": 1.0,
+      "role_hit_count": 1,
+      "role_scored_count": 1,
+      "role_mrr_sum": 1.0,
+      "role_coverage": 1.0,
+      "role_gold_coverage": 1.0,
+      "missing_roles": [],
+      "missing_role_count": 0,
+      "selected_chunk_count": 1,
+      "evidence_coverage": 1.0,
+      "required_content_types": [
+        "执行计划",
+        "统计输出"
+      ],
+      "evidence_types_present": [
+        "执行计划",
+        "统计输出"
+      ],
+      "context_chars": 1087,
+      "global_recall_at_5": true,
+      "global_top5_parents": [
+        "case-023-p008",
+        "case-023-p008",
+        "case-010-p001",
+        "case-023-p003",
+        "doc-001-p007"
+      ],
+      "role_infer_exact": true,
+      "role_infer_coverage": true,
+      "role_infer_jaccard": 1.0,
+      "per_role": {
+        "原因": {
+          "hit": true,
+          "hit_rank": 1,
+          "top3_parents": [
+            "case-023-p008",
+            "case-018-p004",
+            "case-019-p003"
+          ]
+        }
+      },
+      "selected_parents_by_role": {
+        "原因": [
+          "case-023-p008"
+        ]
+      },
+      "latency_ms": 54.215,
+      "latency_ms_inferred": 61.566,
+      "gold_parent_union": [
+        "case-023-p008"
+      ]
+    }
+  ]
+}
