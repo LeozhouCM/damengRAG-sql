@@ -1,0 +1,307 @@
+{
+  "generated_at": "2026-11-26",
+  "source_types": [
+    "case",
+    "doc"
+  ],
+  "source_count": 27,
+  "sources": [
+    {
+      "source_id": "case-001",
+      "source_type": "case",
+      "source_name": "DMSQL优化之with cte写法未构建临时表",
+      "source_file": "DMSQL优化之with cte写法未构建临时表.md",
+      "source_url": "local://dm_cases/DMSQL优化之with cte写法未构建临时表.md",
+      "version": "DM8",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-002",
+      "source_type": "case",
+      "source_name": "[SQL优化] 常量与绑定变量传参对 SQL 执行计划的影响机制解析",
+      "source_file": "[SQL优化] 常量与绑定变量传参对 SQL 执行计划的影响机制解析.md",
+      "source_url": "local://dm_cases/[SQL优化] 常量与绑定变量传参对 SQL 执行计划的影响机制解析.md",
+      "version": "DM8 2025Q2",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-003",
+      "source_type": "case",
+      "source_name": "[SQL优化]DM数据库什么场景可以走rowid索引扫描",
+      "source_file": "[SQL优化]DM数据库什么场景可以走rowid索引扫描.md",
+      "source_url": "local://dm_cases/[SQL优化]DM数据库什么场景可以走rowid索引扫描.md",
+      "version": "DM8",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-004",
+      "source_type": "case",
+      "source_name": "[SQL优化]SPACE_COMPARE_MODE参数导致的性能问题",
+      "source_file": "[SQL优化]SPACE_COMPARE_MODE参数导致的性能问题.md",
+      "source_url": "local://dm_cases/[SQL优化]SPACE_COMPARE_MODE参数导致的性能问题.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "none",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-005",
+      "source_type": "case",
+      "source_name": "[SQL优化]利用TOP_ORDER_OPT_FLAG参数消除SORT操作符",
+      "source_file": "[SQL优化]利用TOP_ORDER_OPT_FLAG参数消除SORT操作符.md",
+      "source_url": "local://dm_cases/[SQL优化]利用TOP_ORDER_OPT_FLAG参数消除SORT操作符.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "none",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-006",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库中子查询写法与优化",
+      "source_file": "[SQL优化]达梦数据库中子查询写法与优化.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库中子查询写法与优化.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-007",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库中的复合索引跳跃扫描",
+      "source_file": "[SQL优化]达梦数据库中的复合索引跳跃扫描.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库中的复合索引跳跃扫描.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "none",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-008",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之CASE WHEN EXISTS(相关子查询)",
+      "source_file": "[SQL优化]达梦数据库优化案例之CASE WHEN EXISTS(相关子查询).md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之CASE WHEN EXISTS(相关子查询).md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "boilerplate",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-009",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之left+inner join的旋转功能",
+      "source_file": "[SQL优化]达梦数据库优化案例之left+inner join的旋转功能.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之left+inner join的旋转功能.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "none",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-010",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之全局索引",
+      "source_file": "[SQL优化]达梦数据库优化案例之全局索引.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之全局索引.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "content",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-011",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之反关联改写",
+      "source_file": "[SQL优化]达梦数据库优化案例之反关联改写.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之反关联改写.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-012",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之反向改写标量子查询",
+      "source_file": "[SQL优化]达梦数据库优化案例之反向改写标量子查询.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之反向改写标量子查询.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "boilerplate",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-013",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之多场景排序集锦",
+      "source_file": "[SQL优化]达梦数据库优化案例之多场景排序集锦.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之多场景排序集锦.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-014",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之字段上的运算",
+      "source_file": "[SQL优化]达梦数据库优化案例之字段上的运算.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之字段上的运算.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "none",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-015",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之索引过滤和回表",
+      "source_file": "[SQL优化]达梦数据库优化案例之索引过滤和回表.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之索引过滤和回表.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-016",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之自连接UPDATE的性能提升",
+      "source_file": "[SQL优化]达梦数据库优化案例之自连接UPDATE的性能提升.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之自连接UPDATE的性能提升.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "content",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-017",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之覆盖索引引发性能倒退",
+      "source_file": "[SQL优化]达梦数据库优化案例之覆盖索引引发性能倒退.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之覆盖索引引发性能倒退.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "none",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-018",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之谓词下推",
+      "source_file": "[SQL优化]达梦数据库优化案例之谓词下推.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之谓词下推.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-019",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例之连接条件下推",
+      "source_file": "[SQL优化]达梦数据库优化案例之连接条件下推.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例之连接条件下推.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-020",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库优化案例分享：隐式转换陷阱、外连转内连、跳跃索引应用、SLCT下推实践",
+      "source_file": "[SQL优化]达梦数据库优化案例分享：隐式转换陷阱、外连转内连、跳跃索引应用、SLCT下推实践.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库优化案例分享：隐式转换陷阱、外连转内连、跳跃索引应用、SLCT下推实践.md",
+      "version": "DM8 2025Q1",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-021",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库的标量子查询改写（案例一）",
+      "source_file": "[SQL优化]达梦数据库的标量子查询改写（案例一）.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库的标量子查询改写（案例一）.md",
+      "version": "DM8 2024Q4",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-022",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦数据库的标量子查询改写（案例二）",
+      "source_file": "[SQL优化]达梦数据库的标量子查询改写（案例二）.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦数据库的标量子查询改写（案例二）.md",
+      "version": "DM8 2024Q4",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-023",
+      "source_type": "case",
+      "source_name": "[SQL优化]达梦的单表SQL优化介绍",
+      "source_file": "[SQL优化]达梦的单表SQL优化介绍.md",
+      "source_url": "local://dm_cases/[SQL优化]达梦的单表SQL优化介绍.md",
+      "version": "DM8 2025Q1",
+      "acquired_at": "2026-11-26",
+      "intro_type": "none",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-024",
+      "source_type": "case",
+      "source_name": "[SQL优化]运行毫秒级别SQL加分页条件慢这么多？",
+      "source_file": "[SQL优化]运行毫秒级别SQL加分页条件慢这么多？.md",
+      "source_url": "local://dm_cases/[SQL优化]运行毫秒级别SQL加分页条件慢这么多？.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-025",
+      "source_type": "case",
+      "source_name": "达梦SQL优化必备：6种方法查执行计划",
+      "source_file": "达梦SQL优化必备：6种方法查执行计划.md",
+      "source_url": "local://dm_cases/达梦SQL优化必备：6种方法查执行计划.md",
+      "version": "未注明",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "case-026",
+      "source_type": "case",
+      "source_name": "达梦数据库慢SQL分析利器：关键信息一键采集",
+      "source_file": "达梦数据库慢SQL分析利器：关键信息一键采集.md",
+      "source_url": "local://dm_cases/达梦数据库慢SQL分析利器：关键信息一键采集.md",
+      "version": "DM8 2024Q4",
+      "acquired_at": "2026-11-26",
+      "intro_type": "none",
+      "copyright_note": "公开技术文章，仅本地学习使用；原文不进入 Git"
+    },
+    {
+      "source_id": "doc-001",
+      "source_type": "doc",
+      "source_name": "DM9 系统管理员手册 第22章 查询优化",
+      "source_file": "DM9系统管理员手册-第22章-查询优化.md",
+      "source_url": "local://dm_docs/DM9系统管理员手册-第22章-查询优化.md",
+      "version": "DM9",
+      "acquired_at": "2026-11-26",
+      "intro_type": "abstract",
+      "copyright_note": "达梦公开文档，仅本地学习使用；原文不进入 Git"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# 本文件控制什么：1A 流水线的全部可调参数——输入/输出路径、来源 URL 前缀、切块长度与重叠。
+# 被谁读取：scripts/build_chunks.py（路径与切块参数）、scripts/check_chunks.py（产物路径）。
+# 依据：实践计划书 §3(四) 配置与启动；§4(三) 切块规则；DM-RAG 论文 §V 的 128 token 检索块与 0 重叠。
+# 只放 1A 实际读取的键；1B 再按表42 增加 embedding_model、vector_store、top_k 等。
+raw_dir: data/raw/dm_cases
+doc_raw_dir: data/raw/dm_docs
+interim_dir: data/interim/cleaned
+processed_dir: data/processed
+registry_file: data/registry/sources.json
+log_dir: data/logs
+source_url_prefix: "local://dm_cases/"
+doc_source_url_prefix: "local://dm_docs/"
+
+# 依据：DM-RAG 论文检索块 128 token；中文按字符近似取 200 字，上限 300 字；
+# 论文 0/10/20 重叠对比以 0 最好，所以不重叠。字符数是工程换算，不是论文原话。
+chunk_min_chars: 80
+chunk_target_chars: 200
+chunk_max_chars: 300
+chunk_overlap_chars: 0

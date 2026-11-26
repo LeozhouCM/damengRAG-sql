@@ -1,0 +1,6 @@
+# 本文件是什么：项目 Python 依赖清单，固定版本，供 pip install -r requirements.txt 使用。
+# 当前范围：只有 1A 实际用到的两个包——PyYAML（读 settings/tags）与 pytest（单元测试）。
+# 依据：实践计划书 表41（测试：pytest）与 §3(四)（settings.yaml）
+# 1A 只做切块和标签，不装 embedding/向量库；1B 再按表41增加 sentence-transformers、chromadb。
+PyYAML==6.0.3
+pytest==9.2.0

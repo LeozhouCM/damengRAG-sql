@@ -1,4 +1,16 @@
+# 本文件是什么：Git 忽略清单，决定哪些文件不进版本库。
+# 原则：虚拟环境/缓存/密钥不提交；原始资料、中间产物、索引、日志按合规要求不进 Git；
+#       data/registry/sources.json 是可复现的来源登记，保留在 Git 中。
 .venv/
 __pycache__/
 *.pyc
 .env
+.pytest_cache/
+.idea/
+
+# 依据：实践计划书 表41、§4 合规——原始资料和索引目录不进 Git
+data/raw/
+data/interim/
+data/processed/
+data/index/
+data/logs/
